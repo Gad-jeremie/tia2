@@ -58,13 +58,15 @@ header {
 	cursor:pointer;	
 	display: none;
 }
+
 .burger li {
-    width: 22px;
-    height: .23em;
-    background-color: #da8610;
-    border-radius: 3px;
-    margin: .37em 0;
+	width: 30px;
+	height: 4px;
+	background-color: #da8610;
+	border-radius: 3px;
+	margin: 5px 0;
 }
+
 .burger.open li {background-color: #d9dde1;}
 
 nav {
