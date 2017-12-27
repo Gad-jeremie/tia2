@@ -181,14 +181,14 @@ ul.dropdown {
 /*  -webkit-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);*/
   /*border-radius: 100%;*/
- padding: 1.12em!important; 
+ padding: 1em!important; 
   line-height: 0;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
    position: absolute;
   top: 2.18em!important;
   right: .1em!important;
-/*  background: #fff;*/
+ background: #fff;
  
 }
 	
