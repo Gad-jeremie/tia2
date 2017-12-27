@@ -150,29 +150,7 @@ ul.dropdown {
   border-radius: 0 0 .2em .2em;
 }
 	
-.search-toggle {
-/*background: rgba(255, 255, 255, 0.3);*/
-/*  -webkit-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);*/
-  /*border-radius: 100%;*/
- padding: 1.09em!important;
-    
-  line-height: 0;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-   position: absolute;
-  top: 2.3em!important;
-  right: 0em!important;
-/*  background: #fff;*/
-}
-	
-.search-icon {
- color: #da8610!important;
- font-size: .6em!important;
- border-radius: 100%;
-}
-
-
+ 
 
 header {
 	height: 61px;
