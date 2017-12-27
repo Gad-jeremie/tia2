@@ -42,8 +42,133 @@
 </ul>
 <!-- drop --> 
        
-       
-      </header>
+</header>
+
+<style type="text/css">
+ul.dropdown {
+  display:none;
+  position: absolute;
+  top: 5em;
+  right: 2em;
+ /* margin-top: 5em;*/
+  background: #777;
+  width: 40%;
+  padding: 0;
+  border-radius: 0 0 .2em .2em;}
+
+  .dropdown li {
+      list-style-type: none;
+  }
+      .dropdown a {
+        text-decoration: none;
+        padding: .5em 1em;
+        display: block;
+      }
+/*   .dropdown-toggle {
+  padding: .5em 1em;
+  background: #777;
+  border-radius: .2em .2em 0 0;
+}*/
+
+
+/* the animated search icon */	
+.search-toggle {
+/*background: rgba(255, 255, 255, 0.3);*/
+  -webkit-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
+/*  border-radius: 100%;*/
+ padding: 1.4em;
+  font-size: 1.2em; 
+  line-height: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+    position: absolute;
+  top: 33px;
+  right: .1em;
+   cursor: pointer;
+}
+
+/*to go to mobile
+*/#Layer_1{position:absolute;
+  height: 16px;width: 16px;  
+  vertical-align: middle;
+  top: 16px!important;
+  right: 4.6em;
+/*background: #444;*/
+  padding: .65em;
+  cursor: pointer;
+}
+
+.search-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+ 
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 10px;
+   color: red;
+/*  background: rgba(255, 255, 255, 0.3);*/
+border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  line-height: 0;
+}
+.search-icon:before, .search-icon:after {
+  position: absolute;
+  display: block;
+  content: '';
+  border-radius: 2em;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+.search-icon:before {
+  -webkit-box-shadow: 0 0  0 .25em;
+  box-shadow: 0 0  0 .25em;
+  width: 1em;
+  height: 1em;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-75%, -75%);
+  transform: translate(-75%, -75%);
+}
+.search-icon:after {
+  width: 1em;
+  height: .3em;
+  background: currentColor;
+  -webkit-transform: translate(0%, 100%) rotate(45deg);
+  transform: translate(0%, 100%) rotate(45deg);
+  top: 50%;
+  left: 50%;
+}
+
+/* active search/x icon */
+.opened .search-icon {
+  background-color: transparent;
+  -webkit-transform: translate(-1em, -0.15em);
+  transform: translate(-1em, -0.15em);
+}
+.opened .search-icon:before, .opened .search-icon:after {
+  -webkit-box-shadow: 0 0 0 0;
+  box-shadow: 0 0 0 0;
+  width: 2em;
+  height: .3em;
+  background: currentColor;
+}
+.opened .search-icon:before {
+  -webkit-transform: translate(0, 0) rotate(225deg);
+          transform: translate(0, 0) rotate(225deg);
+}
+.opened .search-icon:after {
+  -webkit-transform: translate(0, 0) rotate(-225deg);
+          transform: translate(0, 0) rotate(-225deg);
+}
+
+</style>
+	    
+	   
       <nav class="slideLeft">
 		<ul>
 			<li><a href="index.html" class="active">HOME</a></li>
@@ -58,29 +183,42 @@
       </nav>
       <div class="content slideRight">
         <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
-        <ul class="responsive">
-          <li class="header-section">
-            <p class="placefiller">Responsive Menu Using Trunk.js</p>
-          </li>
-          <li class="body-section">
-            <p class="placefiller">Body</p>
-          </li>
-          <li class="footer-section">
-            <p class="placefiller">Footer</p>
-          </li>
-        </ul>
+  		<ul class="responsive">
+			<li class="header-section">
+				<p class="placefiller">HEADER</p>
+			</li>
+			<li class="body-section">
+				<p class="placefiller">BODY</p>
+			</li>
+			<li class="footer-section">
+				<p class="placefiller">FOOTER</p>
+			</li>
+		</ul>
       </div>
     </div>
     </body>
-    </html>
+    </html>  
+
+ <script  src="js/index.js"></script>
+<script type="text/javascript">
+	
+ $(document).ready(function() {
   
-  
+// Dropdown toggle
+$('.search-toggle').click(function(){
+  $('.dropdown').toggle(400);
+});
 
-    <script  src="js/index.js"></script>
+ 
+
+});
+
+  document.querySelector( ".search-toggle" )
+  .addEventListener( "click", function() {
+    this.classList.toggle( "opened" );
+  });
+
+ 
+</script>
 
 
-
-
-</body>
-
-</html>
