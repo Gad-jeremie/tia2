@@ -1,252 +1,66 @@
-<!DOCTYPE html> 
-<html lang="en">
-<head> 
+<!DOCTYPE html>
+<html lang="en" >
 
-<title>Trunk-js Plain</title> 
-
-<meta charset="utf-8">
-<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="HandheldFriendly" content="True">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-<!-- Style Sheets --> 
-<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
-<link rel="stylesheet" type="text/css" media="all" href="css/trunk.css" />
-
-<!-- Scripts --> 
- 
-<script type="text/javascript" language="javascript" src="js/trunk.js"></script>
-<!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<![endif]-->
-
-<style type="text/css">
-
-
-
-  ul.dropdown {
-  display:none;
-  position: absolute;
-  top: 5em;
-  right: 2em;
- /* margin-top: 5em;*/
-  background: #777;
-  width: 40%;
-  padding: 0;
-  border-radius: 0 0 .2em .2em;}
-
-  .dropdown li {
-      list-style-type: none;
-  }
-      .dropdown a {
-        text-decoration: none;
-        padding: .5em 1em;
-        display: block;
-      }
-/*   .dropdown-toggle {
-  padding: .5em 1em;
-  background: #777;
-  border-radius: .2em .2em 0 0;
-}*/
-
-
-/* the animated search icon */
-.search-toggle {
-/*background: rgba(255, 255, 255, 0.3);*/
-  -webkit-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
-/*  border-radius: 100%;*/
- padding: 1.4em;
-  font-size: 1.2em; 
-  line-height: 0;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-    position: absolute;
-  top: 33px;
-  right: .1em;
-   cursor: pointer;
-}
-
-/*to go to mobile
-*/#Layer_1{position:absolute;
-  height: 16px;width: 16px;  
-  vertical-align: middle;
-  top: 16px!important;
-  right: 4.6em;
-/*background: #444;*/
-  padding: .65em;
-  cursor: pointer;
-}
-
-.search-icon {
-  position: absolute;
-  left: 50%;
-  top: 50%;
- 
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 10px;
-   color: red;
-/*  background: rgba(255, 255, 255, 0.3);*/
-border-radius: 100%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-  line-height: 0;
-}
-.search-icon:before, .search-icon:after {
-  position: absolute;
-  display: block;
-  content: '';
-  border-radius: 2em;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
-.search-icon:before {
-  -webkit-box-shadow: 0 0  0 .25em;
-  box-shadow: 0 0  0 .25em;
-  width: 1em;
-  height: 1em;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-75%, -75%);
-  transform: translate(-75%, -75%);
-}
-.search-icon:after {
-  width: 1em;
-  height: .3em;
-  background: currentColor;
-  -webkit-transform: translate(0%, 100%) rotate(45deg);
-  transform: translate(0%, 100%) rotate(45deg);
-  top: 50%;
-  left: 50%;
-}
-
-/* active search/x icon */
-.opened .search-icon {
-  background-color: transparent;
-  -webkit-transform: translate(-1em, -0.15em);
-  transform: translate(-1em, -0.15em);
-}
-.opened .search-icon:before, .opened .search-icon:after {
-  -webkit-box-shadow: 0 0 0 0;
-  box-shadow: 0 0 0 0;
-  width: 2em;
-  height: .3em;
-  background: currentColor;
-}
-.opened .search-icon:before {
-  -webkit-transform: translate(0, 0) rotate(225deg);
-          transform: translate(0, 0) rotate(225deg);
-}
-.opened .search-icon:after {
-  -webkit-transform: translate(0, 0) rotate(-225deg);
-          transform: translate(0, 0) rotate(-225deg);
-}
-
-</style>
-</head> 
- 
-<body> 
-
-<div class="container">
-
-  <header class="slide">     <!-- Add "slideRight" class to items that move right when viewing Nav Drawer  -->
-    <ul id="navToggle" class="burger slide">    <!--  Add "slideRight" class to items that move right when viewing Nav Drawer  -->
-      <li></li><li></li><li></li>
-   
-    </ul>
-    <h1>Trunk.js</h1>
-      <!-- drop --> 
-<!--  <ul class="dropdown">
-  <li><a href="#">Menu Item</a></li>
-  <li><a href="#">Menu</a></li>
-  <li><a href="#">Settings</a></li>
-  <li><a href="#">Search</a></li>
-</ul> --> 
-
-<!-- user -->
-<span id="Layer_1" ><a href="#"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.cls-1{fill:#fff;}</style></defs><!-- <title>user-glyph</title> --><path class="cls-1" d="M345.92,317.25,256,371.2l-89.92-54A172.78,172.78,0,0,0,51.2,480a32,32,0,0,0,32,32H428.8a32,32,0,0,0,32-32A172.78,172.78,0,0,0,345.92,317.25Zm-157.44-42.3c1.15.77,2.3,1.47,3.52,2.18V303l64,38.4L320,303V277.12c1.22-.7,2.37-1.41,3.52-2.18a122.75,122.75,0,0,0,25.6-21A127,127,0,0,0,384,166.4V128a128,128,0,0,0-256,0v38.4A127,127,0,0,0,162.88,254,122.75,122.75,0,0,0,188.48,274.94Z"/></svg></a></span>
-
-
-<span class="search-toggle"><i class="search-icon"></i></span>
-  <ul class="dropdown">
-  <li><a href="#">Menu Item</a></li>
-  <li><a href="#">Menu</a></li>
-  <li><a href="#">Settings</a></li>
-  <li><a href="#">Search</a></li>
-</ul>
-
-  </header>
-    <!-- drop --> 
-
- 
-
-  <nav class="slide">
-    <ul>
-      <li><a href="../trunk.html" class="active">HOME</a></li>
-      <li><a href="#">LINK TWO</a></li>
-      <li><a href="#">LINK THREE</a></li>
-      <li><a href="#">LINK FOUR</a></li>
-      <li><a href="#">LINK FIVE</a></li>
-      <li><a href="#">LINK SIX</a></li>
-      <li><a href="#">LINK SEVEN</a></li>
- 
-    </ul>
-   
-      
-  </nav>
-
- 
-  <div class="content slide">     <!--  Add "slideRight" class to items that move right when viewing Nav Drawer  -->
-
-
-
-    <ul class="responsive">
-      <li class="header-section">
-        <p class="placefiller">HEADER</p>
-      </li>
-      <li class="body-section">
-        <p class="placefiller">BODY</p>
-      </li>
-      <li class="footer-section">
-        <p class="placefiller">FOOTER</p>
-      </li>
-    </ul>
-  </div>
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Menu Using Trunk.js</title>
   
-</div>
+  
+  
+      <link rel="stylesheet" href="css/style.css">
 
   
-</body> 
+</head>
+
+<body>
+
+      <html lang="en">
+    <body>
+    <div class="container">
+      <header class="slideRight">
+        <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+        <ul id="navToggle" class="burger slideRight">
+          <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <h1><a href="#">Responsive Menu</a></h1>
+      </header>
+      <nav class="slideLeft">
+        <ul>
+          <li><a href="http://ibrahimjabbari.com" class="active"><i class="dgicon-home"></i> Home</a></li>
+          <li><a href="#"><i class="dgicon-users"></i> About Us</a></li>
+          <li><a href="#"><i class="dgicon-tools"></i> Services</a></li>
+          <li><a href="#"><i class="dgicon-vcard"></i> Contact Us</a></li>
+          <li><a href="#"><i class="dgicon-window"></i> Back to Article</a></li>
+        </ul>
+      </nav>
+      <div class="content slideRight">
+        <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+        <ul class="responsive">
+          <li class="header-section">
+            <p class="placefiller">Responsive Menu Using Trunk.js</p>
+          </li>
+          <li class="body-section">
+            <p class="placefiller">Body</p>
+          </li>
+          <li class="footer-section">
+            <p class="placefiller">Footer</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </body>
+    </html>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
 </html>
-
-
-<script type="text/javascript">
-  
- $(document).ready(function() {
-  
-// Dropdown toggle
-$('.search-toggle').click(function(){
-  $('.dropdown').toggle(400);
-});
-
- 
-
-});
-
-  document.querySelector( ".search-toggle" )
-  .addEventListener( "click", function() {
-    this.classList.toggle( "opened" );
-  });
-
- 
-</script>
-
-
-
-
-
-
