@@ -60,10 +60,10 @@ header {
 }
 .burger li {
     width: 22px;
-    height: .26em;
+    height: .27em;
     background-color: #da8610;
     border-radius: 3px;
-    margin: .37em 0;
+    margin: .38em 0;
 }
 .burger.open li {background-color: #d9dde1;}
 
