@@ -88,11 +88,16 @@ header h1:hover {color: #2d2321;}
 	display: none;
 }
 .burger li {
-        width: 19px;
+        /*width: 19px;
         height: .21em;
 	background-color: #da8610;
 	border-radius: 3px;
-	margin: .38em 0;
+	margin: .38em 0;*/
+	width: 21px;
+    height: .27em;
+    background-color: #da8610;
+    border-radius: 3px;
+    margin: .31em 0;
 }
 .burger.open li {background-color: #d9dde1;}
 
@@ -181,7 +186,7 @@ ul.dropdown {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
    position: absolute;
-  top: 2.16em!important;
+  top: 2.18em!important;
   right: .1em!important;
 /*  background: #fff;*/
  
@@ -403,4 +408,5 @@ header.close,
 	0%       {transform: translate3d(240px,0,0);}
 	100%  {transform: translate3d(0,0,0);}
 }
+
 }
