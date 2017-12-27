@@ -155,13 +155,13 @@ header {
 header h1 {
 	color: #ffffff;
 	text-align: left;
-        padding-left: 2.3em;
+        padding-left: 5em;
 	display: block;
 }
 	
 	h1 img{
-  width: 93px;
-  margin-top: .2em;
+  width: 50px;
+  margin-top: .4em;
 }
 	
 .burger {display: block;}
