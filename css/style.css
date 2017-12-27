@@ -20,6 +20,17 @@ body {
 a {text-decoration: none;
 	outline:none;}
 
+ /*mobile logo*/
+ #logo{
+ display: none;
+ }
+
+ /*desktop logo*/
+ #logodesktop img{
+ width: 110px;
+ margin-top:.2em; 
+}
+
 .container {
 	overflow: hidden;
 	background-color: #000;
@@ -31,9 +42,10 @@ a {text-decoration: none;
 }
 
 header {
-	height: 65px;
+	min-height: 1px;
 	position: relative;
-	background-color: #555;
+	background-color: #222;
+	padding:.7em 0 .5em 2em;
 }
 header h1{
 	color: #fff;
@@ -57,7 +69,7 @@ header h1:hover {color: #2d2321;}
 .burger li {
         width: 19px;
         height: .21em;
-	background-color: #fff;
+	background-color: #da8610;
 	border-radius: 3px;
 	margin: .38em 0;
 }
@@ -104,13 +116,34 @@ nav li a:hover {color: #000;}
 
 
 @media only screen and (max-width: 780px) {
+
+#logo{
+	width: 100%;
+	height: 9em;
+	background: #111;
+	display: block;
+	z-index: 10;
+	position: absolute;
+
+}
+
+/*hide desktop logo*/
+#logodesktop{
+display: none;
+}
+
+img{
+	width: 100px;
+	margin:1em auto;
+	display: block;
+}
 	
 ul.dropdown {
   display:none;
   position: relative!important;
-  top: .5em!important;
+  top: 5em!important;
  margin: 0 auto!important;
-  background: #777;
+  background: #f8f8f8!important;
   right: 0!important;
  width: 100%!important;
   padding: 0!important;
@@ -119,8 +152,8 @@ ul.dropdown {
 	
 .search-toggle {
 /*background: rgba(255, 255, 255, 0.3);*/
-  -webkit-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
+/*  -webkit-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);*/
   /*border-radius: 100%;*/
  padding: 1.09em!important;
     
@@ -133,20 +166,23 @@ ul.dropdown {
 }
 	
 .search-icon {
- color: #fff!important;
+ color: #da8610!important;
  font-size: .56em!important;
  border-radius: 100%;
 }
 
 
+
 header {
-	height: 68.5px;
+	height: 61px;
 	z-index: 2;
-	background-color: #111;	
+	background-color: #222;	
 	position: fixed;
+	border-bottom:.05em solid #000;
 	top: 0;
 	right: 0;
 	left: 0;
+	padding:0!important;
 	
 		/* starting point */
 	-webkit-transform: translate3d(0,0,0);
@@ -154,12 +190,12 @@ header {
 	transform: translate3d(0,0,0);
 }
 	
-header h1 {
+/*header h1 {
 	color: #ffffff;
 	text-align: center;
 	padding-left: 0;
 	display: block;
-}
+}*/
 	
 .burger {display: block;}
 
@@ -195,7 +231,7 @@ nav li:first-child a.active,
 nav li:first-child a:hover 
 {border-radius: 10px 0 0 0;}
 
-.header-section {margin-top: 60px;}
+.header-section {margin-top: 60px;padding-top: 11em}
 
 
 /* NAVIGATION ANNIMATION */
