@@ -30,15 +30,12 @@ a {text-decoration: none;
 	-ms-backface-visibility: hidden;
 }
 
-
-
-
 header {
 	height: 60px;
 	position: relative;
-	background-color: #F04949;
+	background-color: #555;
 }
-header h1 a {
+header h1{
 	color: #fff;
 	text-align: left;
 	font-size: 27px;
@@ -46,24 +43,23 @@ header h1 a {
 	font-weight: bold;
 	padding-left: 20px;
 }
-header h1 a:hover {color: #2d2321;}
+header h1:hover {color: #2d2321;}
 
 .burger {
 	position: absolute;
 	float: left;
 	padding: 10px;
-	top: 4px;
+	top: .69em;
 	left: 10px;
-	cursor:pointer;
-	
+	cursor:pointer;	
 	display: none;
 }
 .burger li {
-	width: 30px;
-	height: 4px;
+        width: 19px;
+        height: .21em;
 	background-color: #fff;
 	border-radius: 3px;
-	margin: 5px 0;
+	margin: .38em 0;
 }
 .burger.open li {background-color: #d9dde1;}
 
