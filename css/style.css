@@ -241,19 +241,25 @@ nav li a:hover {color: #da8610;}
 }
 
 
+
+
+
+
+
 @media only screen and (max-width: 780px) {
 
 /*override for cart icon*/
 #carticon{
 	position: absolute;
-    height: 23.5px;
-    width: 23.5px;
+    height: 21.5px;
+    width: 21.5px;
     vertical-align: middle;
     top: 11px!important;
-   right: 9.3em;
-    /* background: #444; */
+   right: 8.72em;
+     background: #444; 
     padding: .79em .8em;
     cursor: pointer;
+
 }
 
 
@@ -261,12 +267,12 @@ nav li a:hover {color: #da8610;}
 /*to go to mobile
 */#usericon{
 	position: absolute;
-    height: 18px;
-    width: 18px;
+    height: 16px;
+    width: 16px;
     vertical-align: middle;
     top: 11px!important;
-   right: 4.9em;
-     /*background: #444;*/ 
+   right: 4.7em;
+     background: #444;
     padding: 1em;
     cursor: pointer;
 }
@@ -278,16 +284,23 @@ nav li a:hover {color: #da8610;}
   box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);*/
 /*  border-radius: 100%;*/
  padding: 1.43em!important;
-  font-size: 1.2em; 
+  font-size: 1.14em; 
   line-height: 0;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
     position: absolute;
-  top: 32px;
+  top: 31px;
   right: -.8em!important;
-   /*cursor: pointer;
-   background: red;*/
+   cursor: pointer;
+   background: red;
 }
+
+
+.search-icon {
+ 
+  font-size: 9px;
+ }
+
 
 #logo{
 	width: 100%;
