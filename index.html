@@ -14,6 +14,7 @@
 <![endif]-->
 <style type="text/css">
  
+
 ul.dropdown {
   display:none;
   position: absolute;
@@ -40,102 +41,9 @@ ul.dropdown {
 }*/
 
 
-/* the animated search icon */  
-.search-toggle {
-/*background: rgba(255, 255, 255, 0.3);*/
-  /*-webkit-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);*/
-/*  border-radius: 100%;*/
- padding: 1.4em;
-  font-size: 1.2em; 
-  line-height: 0;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-    position: absolute;
-  top: 33px;
-  right: -.8em;
-   cursor: pointer;
-}
 
-/*to go to mobile
-*/#Layer_1{
-	position: absolute;
-    height: 18px;
-    width: 18px;
-    vertical-align: middle;
-    top: 11px!important;
-   right: 4.9em;
-    /* background: #444; */
-    padding: 1em;
-    cursor: pointer;
-}
 
-.search-icon {
-  position: absolute;
-  left: 50%;
-  top: 50%;
- 
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 10px;
-   color: #da8610;
-/*  background: rgba(255, 255, 255, 0.3);*/
-border-radius: 100%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-  line-height: 0;
-}
-.search-icon:before, .search-icon:after {
-  position: absolute;
-  display: block;
-  content: '';
-  border-radius: 2em;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
-.search-icon:before {
-  -webkit-box-shadow: 0 0  0 .25em;
-  box-shadow: 0 0  0 .25em;
-  width: 1em;
-  height: 1em;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-75%, -75%);
-  transform: translate(-75%, -75%);
-}
-.search-icon:after {
-  width: 1em;
-  height: .3em;
-  background: currentColor;
-  -webkit-transform: translate(0%, 100%) rotate(45deg);
-  transform: translate(0%, 100%) rotate(45deg);
-  top: 50%;
-  left: 50%;
-}
 
-/* active search/x icon */
-.opened .search-icon {
-  background-color: transparent;
-  -webkit-transform: translate(-1em, -0.15em);
-  transform: translate(-1em, -0.15em);
-}
-.opened .search-icon:before, .opened .search-icon:after {
-  -webkit-box-shadow: 0 0 0 0;
-  box-shadow: 0 0 0 0;
-  width: 2em;
-  height: .3em;
-  background: currentColor;
-}
-.opened .search-icon:before {
-  -webkit-transform: translate(0, 0) rotate(225deg);
-          transform: translate(0, 0) rotate(225deg);
-}
-.opened .search-icon:after {
-  -webkit-transform: translate(0, 0) rotate(-225deg);
-          transform: translate(0, 0) rotate(-225deg);
-}
 
 </style>
  
@@ -161,12 +69,22 @@ border-radius: 100%;
           <li></li>
         </ul>
 
-       
-       <!-- user -->
-<span id="Layer_1" ><a href="#"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.cls-1{fill:#da8610;}</style></defs><!-- <title>user-glyph</title> --><path class="cls-1" d="M345.92,317.25,256,371.2l-89.92-54A172.78,172.78,0,0,0,51.2,480a32,32,0,0,0,32,32H428.8a32,32,0,0,0,32-32A172.78,172.78,0,0,0,345.92,317.25Zm-157.44-42.3c1.15.77,2.3,1.47,3.52,2.18V303l64,38.4L320,303V277.12c1.22-.7,2.37-1.41,3.52-2.18a122.75,122.75,0,0,0,25.6-21A127,127,0,0,0,384,166.4V128a128,128,0,0,0-256,0v38.4A127,127,0,0,0,162.88,254,122.75,122.75,0,0,0,188.48,274.94Z"/></svg></a></span>
+ <!-- icon div -->   
+
+ <!-- cart icon -->
+ <svg id="carticon" style="enable-background:new 0 0 30 30;" version="1.1" viewBox="0 0 30 30" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style>.cls-2{fill:#da8610;}</style><circle class ="cls-2" cx="22" cy="25" r="2"/><circle class= "cls-2" cx="12" cy="25" r="2"/><polygon points="24,20 10.5,20 7,9 27,9 "/><path d="M2,3  h1.878c0.665,0,1.251,0.438,1.439,1.077l4.261,14.488C9.828,19.415,10.609,20,11.496,20h10.976c0.902,0,1.692-0.604,1.93-1.474L27,9  H7" style="fill:#da8610;stroke:#da8610;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/></svg>
 
 
+ <div id= "menuicon">  
+<!-- user icon -->
+<span id="usericon" ><a href="#"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.cls-1{fill:#da8610;}</style></defs><!-- <title>user-glyph</title> --><path class="cls-1" d="M345.92,317.25,256,371.2l-89.92-54A172.78,172.78,0,0,0,51.2,480a32,32,0,0,0,32,32H428.8a32,32,0,0,0,32-32A172.78,172.78,0,0,0,345.92,317.25Zm-157.44-42.3c1.15.77,2.3,1.47,3.52,2.18V303l64,38.4L320,303V277.12c1.22-.7,2.37-1.41,3.52-2.18a122.75,122.75,0,0,0,25.6-21A127,127,0,0,0,384,166.4V128a128,128,0,0,0-256,0v38.4A127,127,0,0,0,162.88,254,122.75,122.75,0,0,0,188.48,274.94Z"/></svg></a></span>
+
+<!-- search icon -->
 <span class="search-toggle"><i class="search-icon"></i></span>
+ <!-- icon div -->  
+ </div> 
+
+
   <ul class="dropdown">
   <li><a href="#">Menu Item</a></li>
   <li><a href="#">Menu</a></li>
@@ -174,7 +92,7 @@ border-radius: 100%;
 <!-- drop --> 
 
 <!-- desktop logo -->
-<div id="logodesktop"><img src="logo1.png"></div>
+<div id="logodesktop"><img class="logo" src="logo1.png"></div>
 </header>
 
 	    

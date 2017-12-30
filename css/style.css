@@ -20,14 +20,143 @@ body {
 a {text-decoration: none;
 	outline:none;}
 
+
+/*search icon*/
+
+
+/*to go to mobile
+*/#usericon,#carticon{
+	position: absolute;
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    top: 17px!important;
+   right: 6.6em;
+ /*  background: #444;*/ 
+    padding: .6em 1.1em;
+    cursor: pointer;
+}
+
+/*override for cart icon*/
+#carticon{
+	position: absolute;
+    height: 23.5px;
+    width: 23.5px;
+    vertical-align: middle;
+    top: 13px!important;
+   right:12.25em;
+    padding: .41em 1em;
+    cursor: pointer;
+    /*background: red;*/
+}
+
+
+
+#usericon:hover,.search-toggle:hover,#carticon:hover{
+	background: rgba(0,0,0,.08);
+}
+
+/* the animated search icon */  
+.search-toggle {
+/*background: rgba(255, 255, 255, 0.3);*/
+  /*-webkit-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);*/
+/*  border-radius: 100%;*/ 
+ /*background: #777;*/
+ padding: 1.13em 1.54em;
+  font-size: 1.2em; 
+  line-height: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+    position: absolute;
+  top: 33px;
+  right: .3em;
+   cursor: pointer;
+}
+.search-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+ 
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 10px;
+   color: #da8610;
+/*  background: rgba(255, 255, 255, 0.3);*/
+border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  line-height: 0;
+}
+.search-icon:before, .search-icon:after {
+  position: absolute;
+  display: block;
+  content: '';
+  border-radius: 2em;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+.search-icon:before {
+  -webkit-box-shadow: 0 0  0 .25em;
+  box-shadow: 0 0  0 .25em;
+  width: 1em;
+  height: 1em;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-75%, -75%);
+  transform: translate(-75%, -75%);
+}
+.search-icon:after {
+  width: 1em;
+  height: .3em;
+  background: currentColor;
+  -webkit-transform: translate(0%, 100%) rotate(45deg);
+  transform: translate(0%, 100%) rotate(45deg);
+  top: 50%;
+  left: 50%;
+}
+
+/* active search/x icon */
+.opened .search-icon {
+  background-color: transparent;
+  -webkit-transform: translate(-1em, -0.15em);
+  transform: translate(-1em, -0.15em);
+}
+.opened .search-icon:before, .opened .search-icon:after {
+  -webkit-box-shadow: 0 0 0 0;
+  box-shadow: 0 0 0 0;
+  width: 2em;
+  height: .3em;
+  background: currentColor;
+}
+.opened .search-icon:before {
+  -webkit-transform: translate(0, 0) rotate(225deg);
+          transform: translate(0, 0) rotate(225deg);
+}
+.opened .search-icon:after {
+  -webkit-transform: translate(0, 0) rotate(-225deg);
+          transform: translate(0, 0) rotate(-225deg);
+}
+
+
+
+
  /*mobile logo*/
  #logo{
  display: none;
  }
 
+/*menuicon*/
+ #menuicon{
+  right: 1.2em;
+  top: -.3em;
+  position: absolute;
+ }
  /*desktop logo*/
  #logodesktop img{
- width: 110px;
+ width: 100px;
  margin-top:.2em; 
 }
 
@@ -72,20 +201,22 @@ header {
 
 nav {
 	position: absolute;
-	top: 0;
-	right: 70px;
+    top: 50px;
+    right: 18px;
 }
 nav li {
 	float: left;	
 	display: inline-block;
 }
 nav li a {
-       font-size: 11px;
-	color: #9aa6af;
-	padding: 24px 15px;	
+    font-size: 11px;
+    font-weight: bold;
+	color: #e8e7e7;
+	/*background: red;*/
+	padding: 9px 14px;	
 	display: block;
 }
-nav li a:hover {color: #000;}
+nav li a:hover {color: #da8610;}
 
 /*  Removable CSS  */
 
@@ -112,9 +243,55 @@ nav li a:hover {color: #000;}
 
 @media only screen and (max-width: 780px) {
 
+/*override for cart icon*/
+#carticon{
+	position: absolute;
+    height: 23.5px;
+    width: 23.5px;
+    vertical-align: middle;
+    top: 11px!important;
+   right: 9.3em;
+    /* background: #444; */
+    padding: .79em .8em;
+    cursor: pointer;
+}
+
+
+
+/*to go to mobile
+*/#usericon{
+	position: absolute;
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    top: 11px!important;
+   right: 4.9em;
+     /*background: #444;*/ 
+    padding: 1em;
+    cursor: pointer;
+}
+
+/* the animated search icon */  
+.search-toggle {
+/*background: rgba(255, 255, 255, 0.3);*/
+  /*-webkit-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);*/
+/*  border-radius: 100%;*/
+ padding: 1.43em!important;
+  font-size: 1.2em; 
+  line-height: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+    position: absolute;
+  top: 32px;
+  right: -.8em!important;
+   /*cursor: pointer;
+   background: red;*/
+}
+
 #logo{
 	width: 100%;
-	height: 9em;
+	min-height: 1px;
 	background: #111;
 	display: block;
 	z-index: 10;
@@ -127,9 +304,15 @@ nav li a:hover {color: #000;}
 display: none;
 }
 
-img{
-	width: 100px;
-	margin:1em auto;
+ #menuicon{
+  right: 0em;
+  top: 0em;
+  position: absolute;
+ }
+
+#logo img{
+	width: 90px;
+	margin:.7em auto;
 	display: block;
 }
 	
