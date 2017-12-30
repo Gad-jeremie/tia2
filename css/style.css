@@ -256,7 +256,6 @@ nav li a:hover {color: #da8610;}
     vertical-align: middle;
     top: 11px!important;
    right: 8.72em;
-     background: #444; 
     padding: .79em .8em;
     cursor: pointer;
 
@@ -272,7 +271,6 @@ nav li a:hover {color: #da8610;}
     vertical-align: middle;
     top: 11px!important;
    right: 4.7em;
-     background: #444;
     padding: 1em;
     cursor: pointer;
 }
@@ -292,7 +290,6 @@ nav li a:hover {color: #da8610;}
   top: 31px;
   right: -.8em!important;
    cursor: pointer;
-   background: red;
 }
 
 
