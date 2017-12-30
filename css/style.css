@@ -43,8 +43,8 @@ a {text-decoration: none;
     height: 23.5px;
     width: 23.5px;
     vertical-align: middle;
-    top: 13px!important;
-   right:12.25em;
+    top: 17px!important;
+   right:11.53em;
     padding: .41em 1em;
     cursor: pointer;
     /*background: red;*/
@@ -69,7 +69,7 @@ a {text-decoration: none;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
     position: absolute;
-  top: 33px;
+  top: 35px;
   right: .3em;
    cursor: pointer;
 }
@@ -112,8 +112,8 @@ border-radius: 100%;
   width: 1em;
   height: .3em;
   background: currentColor;
-  -webkit-transform: translate(0%, 100%) rotate(45deg);
-  transform: translate(0%, 100%) rotate(45deg);
+  -webkit-transform: translate(5%, 100%) rotate(45deg);
+  transform: translate(5%, 100%) rotate(45deg);
   top: 50%;
   left: 50%;
 }
@@ -285,7 +285,7 @@ nav li a:hover {color: #da8610;}
  -webkit-transform: translate(-50%, -50%);
  transform: translate(-50%, -50%);
  position: absolute;
- top: 31px;
+ top: 2.35em;
   right: -.8em!important;
 }
 
