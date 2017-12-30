@@ -255,9 +255,8 @@ nav li a:hover {color: #da8610;}
     width: 21.5px;
     vertical-align: middle;
     top: 11px!important;
-   right: 8.72em;
+    right: 8.72em;
     padding: .79em .8em;
-    cursor: pointer;
 
 }
 
@@ -270,9 +269,8 @@ nav li a:hover {color: #da8610;}
     width: 16px;
     vertical-align: middle;
     top: 11px!important;
-   right: 4.7em;
+    right: 4.7em;
     padding: 1em;
-    cursor: pointer;
 }
 
 /* the animated search icon */  
@@ -282,20 +280,19 @@ nav li a:hover {color: #da8610;}
   box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);*/
 /*  border-radius: 100%;*/
  padding: 1.43em!important;
-  font-size: 1.14em; 
-  line-height: 0;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-    position: absolute;
-  top: 31px;
+ font-size: 1.14em; 
+ line-height: 0;
+ -webkit-transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%);
+ position: absolute;
+ top: 31px;
   right: -.8em!important;
-   cursor: pointer;
 }
 
 
 .search-icon {
  
-  font-size: 9px;
+  font-size: 10px;
  }
 
 
