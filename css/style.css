@@ -40,8 +40,8 @@ a {text-decoration: none;
 /*override for cart icon*/
 #carticon{
 	position: absolute;
-    height: 23px;
-    width: 23px;
+    height: 23.5px;
+    width: 23.5px;
     vertical-align: middle;
     top: 17px!important;
    right:11.53em;
@@ -251,10 +251,10 @@ nav li a:hover {color: #da8610;}
 /*override for cart icon*/
 #carticon{
 	position: absolute;
-    height: 21.5px;
-    width: 21.5px;
+    height: 20px;
+    width: 20px;
     vertical-align: middle;
-    top: 11px!important;
+    top: .94em!important;
     right: 8.72em;
     padding: .79em .8em;
 
@@ -265,10 +265,10 @@ nav li a:hover {color: #da8610;}
 /*to go to mobile
 */#usericon{
 	position: absolute;
-    height: 16px;
-    width: 16px;
+    height: 1.25em;
+    width: 1.25em;
     vertical-align: middle;
-    top: 11px!important;
+    top: 1em!important;
     right: 4.7em;
     padding: 1em;
 }
