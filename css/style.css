@@ -40,8 +40,8 @@ a {text-decoration: none;
 /*override for cart icon*/
 #carticon{
 	position: absolute;
-    height: 23.5px;
-    width: 23.5px;
+    height: 23px;
+    width: 23px;
     vertical-align: middle;
     top: 17px!important;
    right:11.53em;
