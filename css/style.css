@@ -248,6 +248,8 @@ nav li a:hover {color: #da8610;}
 
 @media only screen and (max-width: 780px) {
 
+
+
 /*override for cart icon*/
 #carticon{
 	position: absolute;
@@ -289,6 +291,11 @@ nav li a:hover {color: #da8610;}
   right: -.8em!important;
 }
 
+
+/*search input override*/
+.search input[type="search"] {
+  padding: .74rem .5rem!important;
+}
 
 .search-icon {
  
