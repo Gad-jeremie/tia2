@@ -126,10 +126,18 @@ background-color: #222222;
 }
 
  
+#img{
+position: absolute;
+    bottom: -1em;
+    right: -1.5em;
+    min-height: 1px;
+    min-width: 1px;
+    display: block;
+}
 
-
-
-
+#img img{
+  width: 90px;
+}
 .sicon {
   width: 11px;
   height: 11px;
@@ -156,7 +164,7 @@ background-color: #222222;
   -moz-transition: all 0.15s cubic-bezier(1,0,0,1);
   transition: all 0.15s cubic-bezier(1,0,0,1);
 }
-
+ 
 
 .sicon::after {
   width: .6em;
@@ -171,12 +179,12 @@ background-color: #222222;
 
  button[type="submit"] {
     background-color: #da8610;
-    font-weight: bold;
-    margin-left: 8px;
     margin-left: .3rem;
-    padding: 6px 10px;
-    padding: .375rem .8rem;
+    
+ /*   padding: .375rem .8rem;*/
     border:0;
+       height: 3em;
+    width: 3em;
     border-radius: .1em;
 }
 
@@ -233,7 +241,8 @@ background-color: #222222;
 
       <div class="form__field">
         <input type="search" autocomplete="off" name="search" placeholder="What are you looking for?" class="form__input">
-        <button type="submit" class="button"><span class="sicon"></span> </button>
+        <button type="submit" class="button"> <span id="img"><img src="s.png"></span></button>
+       
       </div>
 
     </form>
