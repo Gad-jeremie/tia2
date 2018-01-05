@@ -283,7 +283,7 @@ nav li a:hover {color: #da8610;}
   padding: .72rem .5rem;
 }
 
-/*.button {
+ .button {
    outline: 0;
 width: 9%!important;
     border:0;      
@@ -306,49 +306,8 @@ display: block;
      height: 26px;
     width: 26px;
 }
-*/
-
-.button {
-   outline: 0;
-padding: 1.7em 2em!important;
-    border:1px transparent;      
-    border-radius: .1em;
-    cursor: pointer;
-    margin: auto .3em!important;
-    display: block;
-    background:#da8610;
- }
-
-
-/*to go to mobile
-*/#usericon{
-position: absolute;
-height: 1.25em;
-width: 1.25em;
-vertical-align: middle;
-top: 1em!important;
-right: 4.7em;
-padding: 1em;
-}
-
-
-.dropdown .zz {
-    text-decoration: none;
-    padding:0;
-    display: block;
-}
-
-
-#searchbutton{
-display: block;
-position: absolute;
-top: 1.7em;
-    right: 1.3em;
-  fill:#000;
-   vertical-align: middle;
-     height: 26px;
-    width: 26px;
-}
+ 
+ 
 
 
 
