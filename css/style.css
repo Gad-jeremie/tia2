@@ -286,7 +286,7 @@ nav li a:hover {color: #da8610;}
  .button {
 
    outline: 0;
-padding: .16em!important;
+padding: .1em!important;
     border:1px transparent;      
     border-radius: .1em;
     cursor: pointer;
