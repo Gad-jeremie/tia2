@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" >
+<html lang="fr">
 
 <head>
  <meta charset="utf-8">
@@ -16,24 +16,24 @@
  
 
 ul.dropdown {
-  display:none;
-  position: relative;
- 
- margin-top:.5em;
-  background: transparent;
-  width: 50.7%;
-  right: -52em;
-  /*float: right;*/
+display:none;
+position: relative; 
+margin-top:.5em;
+background: transparent;
+width: 100%;
+
+/*float: right;*/
 }
 
-  .dropdown li {
-      list-style-type: none;
-  }
-      .dropdown a {
-        text-decoration: none;
-        padding: .5em 1em;
-        display: block;
-      }
+.dropdown li {
+list-style-type: none;
+}
+
+.dropdown a {
+text-decoration: none;
+padding: .5em 1em;
+display: block;
+}
 /*   .dropdown-toggle {
   padding: .5em 1em;
   background: #777;
@@ -73,10 +73,10 @@ appearance: none;
 
 input[type="search"] {
   -webkit-appearance: textfield;
-     -moz-appearance: textfield;
-          appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
@@ -86,7 +86,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 input[type="submit"] {
-  cursor: pointer;
+cursor: pointer;
 }
 
 .form__field {
@@ -94,13 +94,25 @@ input[type="submit"] {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
+
+
+}
+
+.dropdown .zz {
+    text-decoration: none;
+    padding:0;
+    display: block;
 }
 
 .form__input {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+          width: 91%;
+          background-color: #fff;
+  color: #42454e;
+  padding: .72rem .5rem;
 }
 
 /* modules/search.css */
@@ -108,9 +120,8 @@ input[type="submit"] {
 .search {
 background-color: #222222;
     font-size: .75rem;
-    padding: 8px;
-    padding: .3rem;
     border-top: .1em solid #42392e;
+    width: 100%;
 }
 
 .search input[type="search"],
@@ -118,13 +129,7 @@ background-color: #222222;
   border-radius: .125rem;
 }
 
-.search input[type="search"] {
-  background-color: #fff;
-  color: #42454e;
-  padding: 6px 8px;
-  padding: .72rem .5rem;
-}
-
+ 
  
  
 .sicon {
@@ -166,21 +171,18 @@ background-color: #222222;
   border-radius: 100%;
 }
 
- button[type="submit"] {
-    background-color: #da8610;
-    margin-left: .3rem;
-    outline: 0;
- /*   padding: .375rem .8rem;*/
-    border:0;
-       height: 3em;
-    width: 3em;
+.button {
+   outline: 0;
+width: 9%;
+    border:0;      
     border-radius: .1em;
     cursor: pointer;
-}
+    margin: auto .3em!important;
+ }
 
 
-#cls-3{
-  margin-top: .45em;
+.cls-3{
+
 }
 </style>
  
@@ -211,13 +213,19 @@ background-color: #222222;
  <!-- icon div -->   
 
  <!-- cart icon -->
- <span id="carticon"><a href="#"><svg style="enable-background:new 0 0 30 30;" version="1.1" viewBox="0 0 30 30" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style>.cls-2{fill:#da8610;}</style><circle class ="cls-2" cx="22" cy="25" r="2"/><circle class= "cls-2" cx="12" cy="25" r="2"/><polygon points="24,20 10.5,20 7,9 27,9 "/><path d="M2,3  h1.878c0.665,0,1.251,0.438,1.439,1.077l4.261,14.488C9.828,19.415,10.609,20,11.496,20h10.976c0.902,0,1.692-0.604,1.93-1.474L27,9  H7" style="fill:#da8610;stroke:#da8610;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/></svg>
+ <span id="carticon"><a href="#"><?xml version="1.0" encoding="UTF-8"?>
+<svg enable-background="new 0 0 30 30" version="1.1" viewBox="0 0 30 30" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><style>.cls-2{fill:#da8610;}</style><circle class="cls-2" cx="22" cy="25" r="2"/><circle class="cls-2" cx="12" cy="25" r="2"/><polygon points="24 20 10.5 20 7 9 27 9"/><path d="M2,3  h1.878c0.665,0,1.251,0.438,1.439,1.077l4.261,14.488C9.828,19.415,10.609,20,11.496,20h10.976c0.902,0,1.692-0.604,1.93-1.474L27,9  H7" fill="#da8610" stroke="#da8610" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+
  </a></span>
 
 
 
 <!-- user icon -->
-<span id="usericon" ><a href="#"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.cls-1{fill:#da8610;}</style></defs><!-- <title>user-glyph</title> --><path class="cls-1" d="M345.92,317.25,256,371.2l-89.92-54A172.78,172.78,0,0,0,51.2,480a32,32,0,0,0,32,32H428.8a32,32,0,0,0,32-32A172.78,172.78,0,0,0,345.92,317.25Zm-157.44-42.3c1.15.77,2.3,1.47,3.52,2.18V303l64,38.4L320,303V277.12c1.22-.7,2.37-1.41,3.52-2.18a122.75,122.75,0,0,0,25.6-21A127,127,0,0,0,384,166.4V128a128,128,0,0,0-256,0v38.4A127,127,0,0,0,162.88,254,122.75,122.75,0,0,0,188.48,274.94Z"/></svg></a></span>
+<span id="usericon" ><a href="#"><?xml version="1.0" encoding="UTF-8"?><svg data-name="Layer 1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<defs><style>.cls-1{fill:#da8610;}</style></defs>
+<path class="cls-1" d="M345.92,317.25,256,371.2l-89.92-54A172.78,172.78,0,0,0,51.2,480a32,32,0,0,0,32,32H428.8a32,32,0,0,0,32-32A172.78,172.78,0,0,0,345.92,317.25Zm-157.44-42.3c1.15.77,2.3,1.47,3.52,2.18V303l64,38.4L320,303V277.12c1.22-.7,2.37-1.41,3.52-2.18a122.75,122.75,0,0,0,25.6-21A127,127,0,0,0,384,166.4V128a128,128,0,0,0-256,0v38.4A127,127,0,0,0,162.88,254,122.75,122.75,0,0,0,188.48,274.94Z"/>
+</svg>
+</a></span>
 
 <!-- search icon -->
 <span class="search-toggle"><i class="search-icon"></i></span>
@@ -234,21 +242,13 @@ background-color: #222222;
    <form action="" method="get" class="search">
 
       <div class="form__field">
-        <input type="search" autocomplete="off" name="search" placeholder="What are you looking for?" class="form__input">
+        <input type="search" autocomplete="off" name="search" placeholder="Que cherchez vous?" class="form__input">
         <button type="submit" class="button">
 
-          <svg version="1.1" id="cls-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   width="20px" height="20px" viewBox="0 0 632.399 632.399" style="enable-background:new 0 0 632.399 632.399;"
-   xml:space="preserve">
- 
-  <path d="M255.108,0C119.863,0,10.204,109.66,10.204,244.904c0,135.245,109.659,244.905,244.904,244.905
-    c52.006,0,100.238-16.223,139.883-43.854l185.205,185.176c1.671,1.672,4.379,1.672,5.964,0.115l34.892-34.891
-    c1.613-1.613,1.47-4.379-0.115-5.965L438.151,407.605c38.493-43.246,61.86-100.237,61.86-162.702
-    C500.012,109.66,390.353,0,255.108,0z M255.108,460.996c-119.34,0-216.092-96.752-216.092-216.092
-    c0-119.34,96.751-216.091,216.092-216.091s216.091,96.751,216.091,216.091C471.199,364.244,374.448,460.996,255.108,460.996z" style="fill:#000;"/>
- 
- 
-</svg>
+        <span id="searchbutton"><a class="zz" href=""> <?xml version="1.0" encoding="UTF-8"?><svg version="1.1" viewBox="0 0 632.399 632.399" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+  <path class="cls-3" d="m255.11 0c-135.24 0-244.9 109.66-244.9 244.9 0 135.24 109.66 244.9 244.9 244.9 52.006 0 100.24-16.223 139.88-43.854l185.2 185.18c1.671 1.672 4.379 1.672 5.964 0.115l34.892-34.891c1.613-1.613 1.47-4.379-0.115-5.965l-182.79-182.78c38.493-43.246 61.86-100.24 61.86-162.7 1e-3 -135.24-109.66-244.9-244.9-244.9zm0 461c-119.34 0-216.09-96.752-216.09-216.09s96.751-216.09 216.09-216.09 216.09 96.751 216.09 216.09-96.751 216.09-216.09 216.09z"/> 
+</svg></a></span>
+
 </button>
        
       </div>
