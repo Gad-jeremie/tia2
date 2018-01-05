@@ -17,8 +17,10 @@ body {
 	-ms-text-size-adjust: none;
 	-ms-font-smoothing: antialiased;
 }
-a {text-decoration: none;
-	outline:none;}
+a {
+text-decoration: none;
+outline:none;
+}
 
 
 /*search icon*/
@@ -247,8 +249,7 @@ nav li a:hover {color: #da8610;}
 
 
 @media only screen and (max-width: 780px) {
-
-
+ 
 
 /*override for cart icon*/
 #carticon{
@@ -262,18 +263,109 @@ nav li a:hover {color: #da8610;}
 
 }
 
+.form__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-right: .7em;
+
+}
+
+.form__input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+          width: 80%!important;
+          background-color: #fff;
+  color: #42454e;
+  padding: .72rem .5rem;
+}
+
+/*.button {
+   outline: 0;
+width: 9%!important;
+    border:0;      
+    border-radius: .1em;
+    cursor: pointer;
+    margin: auto .3em!important;
+    display: block;
+    background:#da8610;
+ }
+.dropdown .zz {
+    text-decoration: none;
+    padding:0;
+    display: block;
+}
+#searchbutton{
+display: block;
+  margin: .45em .4em;
+  fill:#000;
+   vertical-align: middle;
+     height: 26px;
+    width: 26px;
+}
+*/
+
+.button {
+   outline: 0;
+padding: 1.7em 2em!important;
+    border:1px transparent;      
+    border-radius: .1em;
+    cursor: pointer;
+    margin: auto .3em!important;
+    display: block;
+    background:#da8610;
+ }
 
 
 /*to go to mobile
 */#usericon{
-	position: absolute;
-    height: 1.25em;
-    width: 1.25em;
-    vertical-align: middle;
-    top: 1em!important;
-    right: 4.7em;
-    padding: 1em;
+position: absolute;
+height: 1.25em;
+width: 1.25em;
+vertical-align: middle;
+top: 1em!important;
+right: 4.7em;
+padding: 1em;
 }
+
+
+.dropdown .zz {
+    text-decoration: none;
+    padding:0;
+    display: block;
+}
+
+
+#searchbutton{
+display: block;
+position: absolute;
+top: 1.7em;
+    right: 1.3em;
+  fill:#000;
+   vertical-align: middle;
+     height: 26px;
+    width: 26px;
+}
+
+
+
+/*to go to mobile
+*/#usericon{
+position: absolute;
+height: 1.25em;
+width: 1.25em;
+vertical-align: middle;
+top: 1em!important;
+right: 4.7em;
+padding: 1em;
+}
+
+
+
+
 
 /* the animated search icon */  
 .search-toggle {
@@ -293,8 +385,10 @@ nav li a:hover {color: #da8610;}
 
 
 /*search input override*/
-.search input[type="search"] {
+.search {
   padding: .74rem .5rem!important;
+ width: 100%!important;
+
 }
 
 .search-icon {
