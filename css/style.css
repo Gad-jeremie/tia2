@@ -285,8 +285,8 @@ nav li a:hover {color: #da8610;}
 
  .button {
    outline: 0;
-width: 9%!important;
-    border:0;      
+padding: .3em;
+    border:1px transparent;      
     border-radius: .1em;
     cursor: pointer;
     margin: auto .3em!important;
@@ -300,7 +300,7 @@ width: 9%!important;
 }
 #searchbutton{
 display: block;
-  margin: .45em .4em;
+  margin: .45em .44em;
   fill:#000;
    vertical-align: middle;
      height: 26px;
