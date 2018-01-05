@@ -280,12 +280,13 @@ nav li a:hover {color: #da8610;}
           width: 80%!important;
           background-color: #fff;
   color: #42454e;
-  padding: .72rem .5rem;
+  padding: .2rem .5rem!important;
 }
 
  .button {
+ 	
    outline: 0;
-padding: .3em;
+padding: .3em!important;
     border:1px transparent;      
     border-radius: .1em;
     cursor: pointer;
