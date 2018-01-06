@@ -83,7 +83,7 @@ outline:none;
   display: inline-block;
   vertical-align: middle;
   font-size: 10px;
-   color: #da8610;
+   color: #c7b67c;
 /*  background: rgba(255, 255, 255, 0.3);*/
 border-radius: 100%;
   -webkit-transform: translate(-50%, -50%);
@@ -175,7 +175,7 @@ border-radius: 100%;
 header {
 	min-height: 1px;
 	position: relative;
-	background-color: #222;
+	background-color: #373737;
 	padding:.7em 0 .5em 2em;
 }
  
@@ -194,7 +194,7 @@ header {
 .burger li {
     width: 27px;
     height: 4px;
-    background-color: #da8610;
+    background-color: #c7b67c;
     border-radius: 3px;
     margin: 4px 0;
 }
@@ -400,7 +400,7 @@ ul.dropdown {
 header {
 	height: 61px;
 	z-index: 2;
-	background-color: #222;	
+	background-color: #373737;	
 	position: fixed;
 	border-bottom:.05em solid #000;
 	top: 0;
