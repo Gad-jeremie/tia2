@@ -273,7 +273,7 @@ nav li a:hover {color: #da8610;}
  
 .button {
  
-padding:0!important;
+padding:0!important;right: 0!important;
  
  }
 /*override for cart icon*/
