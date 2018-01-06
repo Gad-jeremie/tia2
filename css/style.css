@@ -24,7 +24,9 @@ outline:none;
 
 
 /*search icon*/
-
+.cls-3,.cls-2,.cls-1,.cls-4{
+ fill:#f5d378;
+}
 
 /*to go to mobile
 */#usericon,#carticon{
@@ -39,6 +41,19 @@ outline:none;
     cursor: pointer;
 }
 
+
+ .button {
+position: relative;
+   outline: 0;
+padding: .1em!important;
+    border:1px transparent;      
+    border-radius: .1em;
+    cursor: pointer;
+    margin: auto .4em!important;
+    display: block;
+    background:transparent;
+    right: -.2em;
+ }
 /*override for cart icon*/
 #carticon{
 	position: absolute;
@@ -83,7 +98,7 @@ outline:none;
   display: inline-block;
   vertical-align: middle;
   font-size: 10px;
-   color: #c7b67c;
+   color: #f5d378;
 /*  background: rgba(255, 255, 255, 0.3);*/
 border-radius: 100%;
   -webkit-transform: translate(-50%, -50%);
@@ -175,7 +190,7 @@ border-radius: 100%;
 header {
 	min-height: 1px;
 	position: relative;
-	background-color: #373737;
+	background-color: #292828;
 	padding:.7em 0 .5em 2em;
 }
  
@@ -194,7 +209,7 @@ header {
 .burger li {
     width: 27px;
     height: 4px;
-    background-color: #c7b67c;
+    background-color: #f5d378;
     border-radius: 3px;
     margin: 4px 0;
 }
@@ -283,17 +298,7 @@ nav li a:hover {color: #da8610;}
   padding: .2rem .5rem!important;
 }
 
- .button {
 
-   outline: 0;
-padding: .1em!important;
-    border:1px transparent;      
-    border-radius: .1em;
-    cursor: pointer;
-    margin: auto .3em!important;
-    display: block;
-    background:#da8610;
- }
 .dropdown .zz {
     text-decoration: none;
     padding:0;
@@ -400,7 +405,7 @@ ul.dropdown {
 header {
 	height: 61px;
 	z-index: 2;
-	background-color: #373737;	
+	background-color: #292828;	
 	position: fixed;
 	border-bottom:.05em solid #000;
 	top: 0;
