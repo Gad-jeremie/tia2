@@ -25,7 +25,7 @@ outline:none;
 background: #373737;
     font-size: .83rem;
     border-top: .1em solid #967e4a;
-    width: 98.5%;
+    width: 97%;
     padding: .74rem .5rem!important;
 }
 
@@ -51,17 +51,15 @@ background: #373737;
  .button {
 position: relative;
    outline: 0;
-padding: .3em!important;
+padding: .1em!important;
     border:1px transparent;      
     border-radius: .1em;
     cursor: pointer;
     margin: auto .4em!important;
     display: block;
     background:transparent;
-    right: 0em;
+    right: -.2em;
  }
-
-
 /*override for cart icon*/
 #carticon{
 	position: absolute;
@@ -273,9 +271,6 @@ nav li a:hover {color: #da8610;}
 
 @media only screen and (max-width: 780px) {
  
- .button {
-    right: 0!important;
- }
 
 /*override for cart icon*/
 #carticon{
