@@ -1,92 +1,292 @@
-<!DOCTYPE html>
-<html lang="fr">
+body {
+	background-color: #000;
+	
+	font: 12px "Open Sans", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #9aa6af;
+	text-rendering: optimizelegibility;
+	
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: antialiased;
+	
+	-moz-tap-highlight-color:rgba(0,0,0,0); 
+	-moz-text-size-adjust: none;
+	-moz-font-smoothing: antialiased;
+	
+	-ms-tap-highlight-color:rgba(0,0,0,0); 
+	-ms-text-size-adjust: none;
+	-ms-font-smoothing: antialiased;
+}
+a {
+text-decoration: none;
+outline:none;
+}
+.search {
+background: #373737;
+    font-size: .83rem;
+    border-top: .1em solid #967e4a;
+    width: 98.5%;
+    padding: .74rem .5rem!important;
+}
 
-<head>
- <meta charset="utf-8">
-<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="HandheldFriendly" content="True">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
- <!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<![endif]-->
-<style type="text/css">
+/*search icon*/
+.cls-3,.cls-2,.cls-1,.cls-4{
+ fill:#fdc03f;
+}
+
+/*to go to mobile
+*/#usericon,#carticon{
+	position: absolute;
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    top: 17px!important;
+   right: 6.6em;
+ /*  background: #444;*/ 
+    padding: .6em 1.1em;
+    cursor: pointer;
+}
+
+
+ .button {
+position: relative;
+   outline: 0;
+padding: .3em!important;
+    border:1px transparent;      
+    border-radius: .1em;
+    cursor: pointer;
+    margin: auto .4em!important;
+    display: block;
+    background:transparent;
+    right: -.26em;
+ }
+
+
+/*override for cart icon*/
+#carticon{
+	position: absolute;
+    height: 23.5px;
+    width: 23.5px;
+    vertical-align: middle;
+    top: 17px!important;
+   right:11.53em;
+    padding: .41em 1em;
+    cursor: pointer;
+    /*background: red;*/
+}
+
+
+
+#usericon:hover,.search-toggle:hover,#carticon:hover,.button:hover{
+	background: rgba(0,0,0,.08);
+}
+
+/* the animated search icon */  
+.search-toggle {
+/*background: rgba(255, 255, 255, 0.3);*/
+  /*-webkit-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);*/
+/*  border-radius: 100%;*/ 
+ /*background: #777;*/
+ padding: 1.13em 1.54em;
+  font-size: 1.2em; 
+  line-height: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+    position: absolute;
+  top: 35px;
+  right: .3em;
+   cursor: pointer;
+}
+.search-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+ 
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 10px;
+   color: #fdc03f;
+/*  background: rgba(255, 255, 255, 0.3);*/
+border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  line-height: 0;
+}
+.search-icon:before, .search-icon:after {
+  position: absolute;
+  display: block;
+  content: '';
+  border-radius: 2em;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+.search-icon:before {
+  -webkit-box-shadow: 0 0  0 .25em;
+  box-shadow: 0 0  0 .25em;
+  width: 1em;
+  height: 1em;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-75%, -75%);
+  transform: translate(-75%, -75%);
+}
+.search-icon:after {
+  width: 1em;
+  height: .3em;
+  background: currentColor;
+  -webkit-transform: translate(0%, 100%) rotate(45deg);
+  transform: translate(0%, 100%) rotate(45deg);
+  top: 50%;
+  left: 50%;
+}
+
+/* active search/x icon */
+.opened .search-icon {
+  background-color: transparent;
+  -webkit-transform: translate(-1em, -0.15em);
+  transform: translate(-1em, -0.15em);
+}
+.opened .search-icon:before, .opened .search-icon:after {
+  -webkit-box-shadow: 0 0 0 0;
+  box-shadow: 0 0 0 0;
+  width: 2em;
+  height: .3em;
+  background: currentColor;
+}
+.opened .search-icon:before {
+  -webkit-transform: translate(0, 0) rotate(225deg);
+          transform: translate(0, 0) rotate(225deg);
+}
+.opened .search-icon:after {
+  -webkit-transform: translate(0, 0) rotate(-225deg);
+          transform: translate(0, 0) rotate(-225deg);
+}
+
+
+
+
+ /*mobile logo*/
+ #logo{
+ display: none;
+ }
+
+/*menuicon*/
+ #menuicon{
+  right: 1.2em;
+  top: -.3em;
+  position: absolute;
+ }
+ /*desktop logo*/
+ #logodesktop img{
+ width: 100px;
+ margin-top:.2em; 
+}
+
+.container {
+	overflow: hidden;
+	background-color: #000;
+
+/*  Prevents Flickering  */
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+}
+
+header {
+	min-height: 1px;
+	position: relative;
+	background-color: #373737;
+	padding:.7em 0 .5em 2em;
+}
  
 
-ul.dropdown {
-display:none;
-position: relative; 
-margin-top:.5em;
-background: transparent;
-width: 100%;
-
-/*float: right;*/
+.burger {
+    position: absolute;
+    float: left;
+    padding: 10px;
+    top: .64em;
+    left: 10px;
+    cursor: pointer;
+    display: none;
 }
 
-.dropdown li {
-list-style-type: none;
+
+.burger li {
+    width: 27px;
+    height: 4px;
+    background-color: #fdc03f;
+    border-radius: 3px;
+    margin: 4px 0;
 }
 
-.dropdown a {
-text-decoration: none;
-padding: .5em 1em;
-display: block;
+.burger.open li {background-color: #d9dde1;}
+
+nav {
+	position: absolute;
+    top: 50px;
+    right: 18px;
 }
-/*   .dropdown-toggle {
-  padding: .5em 1em;
-  background: #777;
-  border-radius: .2em .2em 0 0;
-}*/
-
-
-/*search*/
-
-
-::-webkit-input-placeholder {
-  color: #fff;
+nav li {
+	float: left;	
+	display: inline-block;
 }
-
-:-ms-input-placeholder {
-  color: #fff;
+nav li a {
+    font-size: 11px;
+    font-weight: bold;
+	color: #e8e7e7;
+	/*background: red;*/
+	padding: 9px 14px;	
+	display: block;
 }
+nav li a:hover {color: #da8610;}
 
-::-ms-input-placeholder {
-  color: #fff;
+/*  Removable CSS  */
+
+.header-section,
+.body-section,
+.footer-section 
+{padding: 20px;}
+
+.header-section {background-color: #ffffff;}
+.body-section {background-color: #f4f5f6;}
+.footer-section {background-color: #dadee1;}
+.placefiller {
+	text-align: center;
+	font-size: 20px;
+	border: 1px dashed rgba(190, 196, 202, 0.5);
 }
-
-::placeholder {
-  color: #fff;
-}
-
-input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-appearance: none;
-  border: none;
-  font: inherit;
-  margin: 0;
-  outline: 0;
-  padding: 0;
-}
-
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  appearance: textfield;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+.header-section .placefiller {line-height: 300px;}
+.body-section .placefiller {line-height: 900px;}
+.footer-section .placefiller {
+	line-height: 200px;
+	border: 1px dashed rgba(190, 196, 202, 0.9);
 }
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-          appearance: none;
-}
 
-input[type="submit"] {
-cursor: pointer;
+
+
+
+
+
+@media only screen and (max-width: 780px) {
+ 
+ .button {
+    right: 0!important;
+ }
+
+/*override for cart icon*/
+#carticon{
+	position: absolute;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    top: .94em!important;
+    right: 8.72em;
+    padding: .79em .8em;
+
 }
 
 .form__field {
@@ -95,221 +295,331 @@ cursor: pointer;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  padding-right: .7em;
 
-
-}
-
-.dropdown .zz {
-    text-decoration: none;
-    padding:0;
-    display: block;
 }
 
 .form__input {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-          width: 91%;
-          font-size: 13px;
-          font-weight: 400;
-          /*background-color: #fff;*/
-          background: #515050;
-  color: #fff;
-  padding: .72rem .5rem;
+          width: 80%!important;
+          background-color: #fff;
+  color: #42454e;
+  padding: .2rem .5rem!important;
 }
 
-/* modules/search.css */
 
-
-
-.search input[type="search"],
-.search input[type="submit"] {
-  border-radius: .125rem;
+.dropdown .zz {
+    text-decoration: none;
+    padding:0;
+    display: block;
 }
-
+#searchbutton{
+display: block;
+  margin: .45em .44em;
+  fill:#000;
+   vertical-align: middle;
+     height: 26px;
+    width: 26px;
+}
  
  
+
+
+
+/*to go to mobile
+*/#usericon{
+position: absolute;
+height: 1.25em;
+width: 1.25em;
+vertical-align: middle;
+top: 1em!important;
+right: 4.7em;
+padding: 1em;
+}
+
+
+
+
+
+/* the animated search icon */  
+.search-toggle {
+/*background: rgba(255, 255, 255, 0.3);*/
+  /*-webkit-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);*/
+/*  border-radius: 100%;*/
+ padding: 1.43em!important;
+ font-size: 1.14em; 
+ line-height: 0;
+ -webkit-transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%);
+ position: absolute;
+ top: 2.35em;
+  right: -.8em!important;
+}
+
+
+/*search input override*/
+.search {
+  padding: .74rem .5rem!important;
+ width: 100%!important;
+
+}
+
+.search-icon {
  
-.sicon {
-  width: 11px;
-  height: 11px;
-  display: block;
-  position: relative;
-  border-radius: 50%;
-  border: 2px solid #1b1102;
-  top:0em;
-  right: .03em;
+  font-size: 8px;
+ }
+
+
+#logo{
+	width: 100%;
+	min-height: 1px;
+	background: #111;
+	display: block;
+	z-index: 10;
+	position: absolute;
+
 }
 
-.sicon:hover {
-  cursor: pointer;
+/*hide desktop logo*/
+#logodesktop{
+display: none;
 }
 
-.sicon::before,
-.sicon::after {
-  content: '';
-  display: block;
+ #menuicon{
+  right: 0em;
+  top: 0em;
   position: absolute;
-  border-radius: 3px;
-  background: #1b1102;
-  -webkit-transition: all 0.15s cubic-bezier(1,0,0,1);
-  -moz-transition: all 0.15s cubic-bezier(1,0,0,1);
-  transition: all 0.15s cubic-bezier(1,0,0,1);
+ }
+
+#logo img{
+	width: 90px;
+	margin:.7em auto;
+	display: block;
 }
+	
+ul.dropdown {
+  display:none;
+  position: relative!important;
+  top: 5em!important;
+ margin: 0 auto!important;
+   right: 0!important;
+ width: 100%!important;
+  padding: 0!important;
+  border-radius: 0 0 .2em .2em;
+}
+	
  
 
-.sicon::after {
-  width: .6em;
-  height: .15em;
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-    top: .89em;
-    left: .61em;
-  border-radius: 100%;
+header {
+	height: 61px;
+	z-index: 2;
+	background-color: #373737;	
+	position: fixed;
+	border-bottom:.05em solid #222;
+	top: 0;
+	right: 0;
+	left: 0;
+	padding:0!important;
+	
+		/* starting point */
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+	
+/*header h1 {
+	color: #ffffff;
+	text-align: center;
+	padding-left: 0;
+	display: block;
+}*/
+	
+.burger {display: block;}
+
+
+/*  Nav Drawer Layout  */
+nav {position: relative;}
+
+nav ul {
+	height: 100%;
+	overflow-y: auto;
+}
+nav li {
+	display: block;
+	float: none;
+}
+nav li a {
+	padding: 22px 25px;
+	letter-spacing: 3px;
+	font-size: 14px;
+}
+nav li a.logo {
+	display: none;
+}
+nav li a.active {
+	color: #fff;
+	background-color: #141e23;
+}
+nav li a:hover {
+	color: #fff;
+	background-color: #19252c;
+}
+nav li:first-child a.active,
+nav li:first-child a:hover 
+{border-radius: 10px 0 0 0;}
+
+.header-section {margin-top: 60px;padding-top: 11em}
+
+
+/* NAVIGATION ANNIMATION */
+nav {
+	width: 93%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	margin: 0;
+	background-color: #1d2d35;
+	border-radius: 8px;
+	
+	/* starting point */
+	opacity: .3;
+	-webkit-transform: translate3d(5%,0,0)scale(.97);
+	-moz-transform: translate3d(5%,0,0)scale(.97);
+	transform: translate3d(5%,0,0)scale(.97);
 }
 
- 
- 
+/*Nav Expanding Open Effect*/
+nav.open {
+	opacity: 1;
 
-
-</style>
- 
- 
-<title>Tia</title>   
-</head>
-
-    <body>
-
-   
-    <div class="container">
- 
-   
-
-      <header class="slideRight">
-
-
-        <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
-        <ul id="navToggle" class="burger slideRight">
-          <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-
-
- <div id= "menuicon">  
- <!-- icon div -->   
-
- <!-- cart icon -->
- <span id="carticon"><a href="#"><?xml version="1.0" encoding="UTF-8"?>
-<svg enable-background="new 0 0 30 30" version="1.1" viewBox="0 0 30 30" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><circle class="cls-2" cx="22" cy="25" r="2"/><circle class="cls-2" cx="12" cy="25" r="2"/><polygon points="24 20 10.5 20 7 9 27 9"/><path class="cls-4" d="M2,3  h1.878c0.665,0,1.251,0.438,1.439,1.077l4.261,14.488C9.828,19.415,10.609,20,11.496,20h10.976c0.902,0,1.692-0.604,1.93-1.474L27,9  H7" stroke="#fdc03f" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/></svg>
-
- </a></span>
-
-
-
-<!-- user icon -->
-<span id="usericon" ><a href="#"><?xml version="1.0" encoding="UTF-8"?><svg data-name="Layer 1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-<defs></defs>
-<path class="cls-1" d="M345.92,317.25,256,371.2l-89.92-54A172.78,172.78,0,0,0,51.2,480a32,32,0,0,0,32,32H428.8a32,32,0,0,0,32-32A172.78,172.78,0,0,0,345.92,317.25Zm-157.44-42.3c1.15.77,2.3,1.47,3.52,2.18V303l64,38.4L320,303V277.12c1.22-.7,2.37-1.41,3.52-2.18a122.75,122.75,0,0,0,25.6-21A127,127,0,0,0,384,166.4V128a128,128,0,0,0-256,0v38.4A127,127,0,0,0,162.88,254,122.75,122.75,0,0,0,188.48,274.94Z"/>
-</svg>
-</a></span>
-
-<!-- search icon -->
-<span class="search-toggle"><i class="search-icon"></i></span>
- <!-- icon div -->  
- </div> 
-
-
- 
-<!-- drop --> 
-
-<!-- desktop logo -->
-<div id="logodesktop"><img class="logo" src="logo1.png"></div>
-     <ul class="dropdown">
-   <form action="" method="get" class="search">
-
-      <div class="form__field">
-        <input type="search" autocomplete="off" name="search" placeholder="Que cherchez vous?" class="form__input">
-        <button type="submit" class="button">
-
-        <span id="searchbutton"><a class="zz" href=""> <?xml version="1.0" encoding="UTF-8"?><svg version="1.1" viewBox="0 0 632.399 632.399" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-  <path class="cls-3" d="m255.11 0c-135.24 0-244.9 109.66-244.9 244.9 0 135.24 109.66 244.9 244.9 244.9 52.006 0 100.24-16.223 139.88-43.854l185.2 185.18c1.671 1.672 4.379 1.672 5.964 0.115l34.892-34.891c1.613-1.613 1.47-4.379-0.115-5.965l-182.79-182.78c38.493-43.246 61.86-100.24 61.86-162.7 1e-3 -135.24-109.66-244.9-244.9-244.9zm0 461c-119.34 0-216.09-96.752-216.09-216.09s96.751-216.09 216.09-216.09 216.09 96.751 216.09 216.09-96.751 216.09-216.09 216.09z"/> 
-</svg></a></span>
-
-</button>
-       
-      </div>
-
-    </form>
-</ul>
-</header>
-
+	-webkit-transform: translate3d(0,0,0)scale(1);
+	-webkit-animation: slideIn .35s ease-in-out;
 	
-	   
-      <nav class="slideLeft">
-		<ul>
-			<li><a href="index.html" class="active">HOME</a></li>
-			<li><a href="#">LINK TWO</a></li>
-			<li><a href="#">LINK THREE</a></li>
-			<li><a href="#">LINK FOUR</a></li>
-			<li><a href="#">LINK FIVE</a></li>
-			<li><a href="#">LINK SIX</a></li>
-			<li><a href="#">LINK SEVEN</a></li>
- 
-		</ul>
-      </nav>
-
-
-      <div class="content slideRight">
-        <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
-  		<ul class="responsive">
-
-
-<!-- mobile logo -->
-<div id="logo"><img src="logo1.png"></div>
-			<li class="header-section">
-      
-      <!-- logo -->
-      
-
-				<p class="placefiller">HEADER</p>
-			</li>
-			<li class="body-section">
-				<p class="placefiller">BODY</p>
-			</li>
-			<li class="footer-section">
-				<p class="placefiller">FOOTER</p>
-			</li>
-		</ul>
-      </div>
-    </div>
-    </body>
-    </html>  
-
- <script  src="js/index.js"></script>
-<script type="text/javascript">
+	-moz-transform: translate3d(0,0,0)scale(1);
+	-moz-animation: slideIn .35s ease-in-out;
 	
- $(document).ready(function() {
-  
-// Dropdown toggle
-$('.search-toggle').click(function(){
-  $('.dropdown').slideToggle(150);
-  $('.form__input').focus();
-});
+	transform: translate3d(0,0,0)scale(1);
+	animation: slideIn .35s ease-in-out;
+}
+@-webkit-keyframes slideIn {
+	0%       {opacity: .3;
+				-webkit-transform: translate3d(5%,0,0)scale(.97);}
+	100%  {opacity: 1;
+				-webkit-transform: translate3d(0,0,0)scale(1);}
+}
+@-moz-keyframes slideIn {
+	0%      {opacity: .3;
+				-moz-transform: translate3d(5%,0,0)scale(.97);}
+	100%  {opacity: 1;
+				-moz-transform: translate3d(0,0,0)scale(1);}
+}
+@keyframes slideIn {
+	0%      {opacity: .3;
+				transform: translate3d(5%,0,0)scale(.97);}
+	100%  {opacity: 1;
+				transform: translate3d(0,0,0)scale(1);}
+}
 
- 
+/*Nav Shrinking Closed Effect*/
+nav.close {
+	opacity: .3;
+	
+	-webkit-transform: translate3d(5%,0,0)scale(.97);
+	-webkit-animation: slideOut .3s ease-in-out;
+	
+	-moz-transform: translate3d(5%,0,0)scale(.97);
+	-moz-animation: slideOut .3s ease-in-out;
+	
+	transform: translate3d(5%,0,0)scale(.97);
+	animation: slideOut .3s ease-in-out;
+}
+@-webkit-keyframes slideOut {
+	0%      {opacity: 1;
+				-webkit-transform: translate3d(0,0,0)scale(1);}
+	100%  {opacity: .3;
+				-webkit-transform: translate3d(5%,0,0)scale(.97);}
+}
+@-moz-keyframes slideOut {
+	0%      {opacity: 1;
+				-moz-transform: translate3d(0,0,0)scale(1);}
+	100%  {opacity: .3;
+				-moz-transform: translate3d(5%,0,0)scale(.97);}
+}
+@keyframes slideOut {
+	0%      {opacity: 1;
+				transform: translate3d(0,0,0)scale(1);}
+	100%  {opacity: .3;
+				transform: translate3d(5%,0,0)scale(.97);}
+}
 
-});
-
-  document.querySelector( ".search-toggle" )
-  .addEventListener( "click", function() {
-    this.classList.toggle( "opened" );
-  });
 
 
- 
-</script>
+/* CONTENT ANNIMATION */
+.content {
+	/* starting point */
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	z-index: 1;
+}
 
+/*Content Sliding Open Effect*/
+header.open,
+.content.open 
+{   
+	-webkit-transform: translate3d(240px,0,0);
+	-webkit-animation: open .5s ease-in-out;
+	
+	-moz-transform: translate3d(240px,0,0);
+	-moz-animation: open .5s ease-in-out;
+	
+	transform: translate3d(240px,0,0);
+	animation: open .5s ease-in-out;
+}
+@-webkit-keyframes open {
+	0%      {-webkit-transform: translate3d(0,0,0);}
+	70%    {-webkit-transform: translate3d(260px,0,0);}
+	100%  {-webkit-transform: translate3d(240px,0,0);}
+}
+@-moz-keyframes open {
+	0%      {-moz-transform: translate3d(0,0,0);}
+	70%    {-moz-transform: translate3d(260px,0,0);}
+	100%  {-moz-transform: translate3d(240px,0,0);}
+}
+@keyframes open {
+	0%      {transform: translate3d(0,0,0);}
+	70%    {transform: translate3d(260px,0,0);}
+	100%  {transform: translate3d(240px,0,0);}
+}
 
+/*Content Sliding Closed Effect*/
+header.close,
+.content.close 
+{
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-animation: close .3s ease-in-out;
+	
+	-moz-transform: translate3d(0,0,0);
+	-moz-animation: close .3s ease-in-out;
+	
+	transform: translate3d(0,0,0);
+	animation: close .3s ease-in-out;
+}
+@-webkit-keyframes close {
+	0%      {-webkit-transform: translate3d(240px,0,0);}
+	100%  {-webkit-transform: translate3d(0,0,0);}
+}
+@-moz-keyframes close {
+	0%       {-moz-transform: translate3d(240px,0,0);}
+	100%  {-moz-transform: translate3d(0,0,0);}
+}
+@keyframes close {
+	0%       {transform: translate3d(240px,0,0);}
+	100%  {transform: translate3d(0,0,0);}
+}
+
+}
